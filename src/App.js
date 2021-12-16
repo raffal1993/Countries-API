@@ -1,5 +1,7 @@
+import AppProvider from "./providers/AppProvider";
+
 function App() {
-     return <div className='App'>ddd</div>;
+     return <AppProvider>ddd</AppProvider>;
 }
 
 export default App;
