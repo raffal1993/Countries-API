@@ -1,7 +1,12 @@
 import AppProvider from "./providers/AppProvider";
+import Dashboard from "views/Dashboard";
 
 function App() {
-     return <AppProvider>ddd</AppProvider>;
+     return (
+          <AppProvider>
+               <Dashboard />
+          </AppProvider>
+     );
 }
 
 export default App;
