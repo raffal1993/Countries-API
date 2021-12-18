@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
     font-size: ${({ theme }) => theme.fontSize.s};
     position: relative;
     border-radius: 5px;
+    z-index: 100;
 `;
 
 export const Button = styled.button`
