@@ -34,9 +34,11 @@ export const Content = styled.div`
 
     h2 {
         font-size: ${({ theme }) => theme.fontSize.l};
+        font-weight: 600;
         margin-bottom: 15px;
     }
     div {
+        font-weight: 300;
         p {
             margin: 0 0 5px 0;
             font-size: ${({ theme }) => theme.fontSize.s};
