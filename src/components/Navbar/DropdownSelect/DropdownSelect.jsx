@@ -1,27 +1,46 @@
 import { useSelect } from "downshift";
 import { Wrapper, Button, SelectList } from "./DropdownSelect.style";
 import { IoIosArrowDown } from "react-icons/io";
+import { useDispatch, useSelector } from "react-redux";
+import { setRegion } from "actions/countriesSlice";
+import { useEffect, useState } from "react";
 
-const regions = [`Africa`, `America`, `Asia`];
+const regions = [`Africa`, `Americas`, `Asia`, `Europe`, `Oceania`];
 
 export const DropdownSelect = () => {
+    const name = useSelector((state) => state.countries.name);
+    useEffect(() => {
+        if (name) setItem("");
+    }, [name]);
+
+    const dispatch = useDispatch();
+    const [region, setItem] = useState("");
+
+    const handleSelectedItemChange = ({ selectedItem }) => {
+        setItem(selectedItem);
+    };
+
+    useEffect(() => {
+        dispatch(setRegion(region));
+    }, [region, dispatch]);
+
     const {
         isOpen,
-        selectedItem,
         getToggleButtonProps,
-        //   getLabelProps,
+        getLabelProps,
         getMenuProps,
-        // highlightedIndex,
         getItemProps
-    } = useSelect({ items: regions });
-
-    console.log();
+    } = useSelect({
+        items: regions,
+        selectedItem: region,
+        onSelectedItemChange: handleSelectedItemChange
+    });
 
     return (
         <Wrapper>
-            {/* <label {...getLabelProps()}></label> */}
+            <label {...getLabelProps()} />
             <Button type='button' {...getToggleButtonProps()}>
-                {selectedItem || "Filter by Region"}
+                {region ? region : "Filter by Region"}
                 <div>
                     <IoIosArrowDown />
                 </div>
