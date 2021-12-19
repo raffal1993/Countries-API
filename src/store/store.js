@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import countriesReducer from "store/countriesSlice";
-import { countriesApi } from "hooks/useCountries";
+import countriesReducer from "actions/countriesSlice";
+import { countriesApi } from "actions/fetchCountries";
 
 export const store = configureStore({
     reducer: {
