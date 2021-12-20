@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import countriesReducer from "actions/countriesSlice";
+import countriesReducer from "actions/inputs";
 import { countriesApi } from "actions/fetchCountries";
 
 export const store = configureStore({

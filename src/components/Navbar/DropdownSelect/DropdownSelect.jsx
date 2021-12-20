@@ -2,7 +2,7 @@ import { useSelect } from "downshift";
 import { Wrapper, Button, SelectList } from "./DropdownSelect.style";
 import { IoIosArrowDown } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
-import { setRegion } from "actions/countriesSlice";
+import { setRegion } from "actions/inputs";
 import { useEffect, useState } from "react";
 
 const regions = [`Africa`, `Americas`, `Asia`, `Europe`, `Oceania`];

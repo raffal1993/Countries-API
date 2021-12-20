@@ -7,7 +7,7 @@ import {
     useGetCountriesByNameQuery
 } from "actions/fetchCountries";
 import { useDispatch } from "react-redux";
-import { setName } from "actions/countriesSlice";
+import { setName } from "actions/inputs";
 
 const CountriesList = () => {
     const name = useSelector((state) => state.countries.name);
