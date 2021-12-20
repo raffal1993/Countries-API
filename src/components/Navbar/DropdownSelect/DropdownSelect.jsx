@@ -9,16 +9,16 @@ const regions = [`Africa`, `Americas`, `Asia`, `Europe`, `Oceania`];
 
 export const DropdownSelect = () => {
     const name = useSelector((state) => state.countries.name);
-    useEffect(() => {
-        if (name) setItem("");
-    }, [name]);
-
     const dispatch = useDispatch();
     const [region, setItem] = useState("");
 
     const handleSelectedItemChange = ({ selectedItem }) => {
         setItem(selectedItem);
     };
+
+    useEffect(() => {
+        if (name) setItem("");
+    }, [name]);
 
     useEffect(() => {
         dispatch(setRegion(region));
