@@ -21,6 +21,12 @@ export const Button = styled.button`
     padding: 15px 20px;
     border-radius: inherit;
     cursor: pointer;
+
+    div {
+        transform-origin: 50% 35%;
+        transform: ${({ isOpen }) =>
+            isOpen ? "rotate(180deg)" : "rotate(0deg)"};
+    }
 `;
 
 export const SelectList = styled.ul`

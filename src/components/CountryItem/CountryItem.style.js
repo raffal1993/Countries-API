@@ -1,12 +1,19 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(Link)`
     width: 250px;
     height: 350px;
     background-color: ${({ theme }) => theme.colors.darkBlue};
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        box-shadow: 0px 0px 5px 1px ${({ theme }) => theme.colors.darkGray};
+    }
 
     .image-container {
         width: 100%;
