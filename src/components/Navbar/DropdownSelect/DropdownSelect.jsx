@@ -3,22 +3,23 @@ import { Wrapper, Button, SelectList } from "./DropdownSelect.style";
 import { IoIosArrowDown } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import { setRegion } from "actions/inputs";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const regions = [`Africa`, `Americas`, `Asia`, `Europe`, `Oceania`];
 
 export const DropdownSelect = () => {
     const name = useSelector((state) => state.countries.name);
+    const region = useSelector((state) => state.countries.region);
+
     const dispatch = useDispatch();
-    const [region, setItem] = useState("");
 
     const handleSelectedItemChange = ({ selectedItem }) => {
-        setItem(selectedItem);
+        return dispatch(setRegion(selectedItem));
     };
 
     useEffect(() => {
-        if (name) setItem("");
-    }, [name]);
+        if (name) dispatch(setRegion(""));
+    }, [name, dispatch]);
 
     useEffect(() => {
         dispatch(setRegion(region));
@@ -39,7 +40,7 @@ export const DropdownSelect = () => {
     return (
         <Wrapper>
             <label {...getLabelProps()} />
-            <Button type='button' {...getToggleButtonProps()}>
+            <Button isOpen={isOpen} type='button' {...getToggleButtonProps()}>
                 {region ? region : "Filter by Region"}
                 <div>
                     <IoIosArrowDown />
