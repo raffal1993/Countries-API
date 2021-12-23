@@ -1,5 +1,7 @@
 import React from "react";
 import { Wrapper, Content } from "./CountryItem.style";
+import { setCountryCode } from "actions/inputs";
+import { useDispatch } from "react-redux";
 
 const CountryItem = ({
     country: {
@@ -7,11 +9,16 @@ const CountryItem = ({
         population,
         region,
         capital,
-        flags: { png }
+        flags: { png },
+        alpha3Code
     }
 }) => {
+    const dispatch = useDispatch();
+    const handleShowCountry = () => {
+        dispatch(setCountryCode(alpha3Code));
+    };
     return (
-        <Wrapper>
+        <Wrapper to={`/country/${alpha3Code}`} onClick={handleShowCountry}>
             <div className='image-container'>
                 <img src={png} alt='flag' />
             </div>
