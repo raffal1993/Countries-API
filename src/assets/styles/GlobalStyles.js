@@ -2,11 +2,10 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
-html{
-        box-sizing: border-box;
-}
+
 
 body{
+        box-sizing: border-box;
         font-family: 'Nunito Sans', sans-serif;
         margin: 0;
         padding: 0;
@@ -22,8 +21,17 @@ h1,h2,h3,h4,h5,h6{
         box-sizing: inherit;
 }
 
+li,ul{
+        margin: 0;
+        padding:0;
+        list-style: none;
+        text-decoration: none;
+}
+
 
 a, button,::placeholder,input {
         font-family: 'Nunito Sans', sans-serif;
+        padding: 0;
+margin: 0;
 }
 `;
