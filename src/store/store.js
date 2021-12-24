@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import countriesReducer from "actions/inputs";
+import modeReducer from "actions/toggleMode";
 import { countriesApi } from "actions/fetchCountries";
 import { loadState, saveState } from "./sessionStorage";
 import { throttle } from "lodash";
@@ -8,6 +9,7 @@ export const store = configureStore({
     preloadedState: loadState(),
     reducer: {
         countries: countriesReducer,
+        mode: modeReducer,
         [countriesApi.reducerPath]: countriesApi.reducer
     },
     middleware: (getDefaultMiddleware) => {

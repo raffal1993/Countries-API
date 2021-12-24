@@ -21,7 +21,7 @@ export const CountryInfo = styled.div`
     flex-direction: column;
     padding: 20px 0;
     padding-left: 60px;
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.textPrimary};
     width: 60%;
     height: 100%;
 
@@ -62,7 +62,6 @@ export const CountryInfo = styled.div`
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
-            /* flex-basis: auto; */
 
             ${Button} {
                 margin: 5px;

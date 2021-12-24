@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const Wrapper = styled(Link)`
     width: 250px;
     height: 350px;
-    background-color: ${({ theme }) => theme.colors.darkBlue};
+    background-color: ${({ theme }) => theme.colors.backgroundPrimary};
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -31,7 +31,7 @@ export const Wrapper = styled(Link)`
 `;
 
 export const Content = styled.div`
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.textPrimary};
     width: 100%;
     height: 50%;
     padding: 20px;
@@ -41,7 +41,7 @@ export const Content = styled.div`
 
     h2 {
         font-size: ${({ theme }) => theme.fontSize.l};
-        font-weight: 600;
+        font-weight: 900;
         margin-bottom: 15px;
     }
     div {

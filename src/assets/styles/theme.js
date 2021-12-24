@@ -1,19 +1,40 @@
-export const theme = {
-    colors: {
-        darkBlue: `hsl(209, 23%, 22%)`, //Dark Mode Elements
-        veryDarkBlue: `hsl(207, 26%, 17%)`, // Dark Mode Background
-        veryDarkBlueText: `hsl(200, 15%, 8%)`, //Light Mode Text
-        darkGray: `hsl(0, 0%, 52%)`, //Light Mode Input
-        veryLightGray: `hsl(0, 0%, 98%)`, //Light Mode Background
-        white: `hsl(0, 0%, 100%)`, //Dark Mode Text & Light Mode Elements,
-        lightGrey: `hsla(0, 0%, 100%,0.8)` //Dark Mode Text & Light Mode Elements
-    },
-    fontSize: {
+export const getTheme = (mode) => {
+    const fontSize = {
         xs: "10px",
         s: "12px",
         m: "14px",
         l: "16px",
         xl: "18px",
         xxl: "20px"
-    }
+    };
+
+    if (mode === "dark")
+        return {
+            colors: {
+                darkGray: `hsl(0, 0%, 52%)`,
+
+                backgroundPrimary: `hsl(209, 23%, 22%)`,
+                backgroundSecondary: `hsl(207, 26%, 17%)`,
+
+                textPrimary: `hsl(0, 0%, 100%)`,
+                textSecondary: `hsla(0, 0%, 100%, 0.8)`
+            },
+            fontSize
+        };
+
+    if (mode === "light")
+        return {
+            colors: {
+                veryDarkBlue: `hsl(207, 26%, 17%)`,
+                veryDarkBlueText: `hsl(200, 15%, 8%)`,
+                darkGray: `hsl(0, 0%, 52%)`,
+
+                backgroundPrimary: `hsl(0, 0%, 95%)`,
+                backgroundSecondary: `hsl(0, 0%, 91%)`,
+
+                textPrimary: `hsl(200, 15%, 8%)`,
+                textSecondary: `hsl(207, 26%, 17%)`
+            },
+            fontSize
+        };
 };

@@ -4,8 +4,8 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     width: 200px;
-    background-color: ${({ theme }) => theme.colors.darkBlue};
-    color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.backgroundPrimary};
+    color: ${({ theme }) => theme.colors.textPrimary};
     font-size: ${({ theme }) => theme.fontSize.s};
     position: relative;
     border-radius: 5px;
@@ -31,8 +31,6 @@ export const Button = styled.button`
 
 export const SelectList = styled.ul`
     display: ${({ isOpen }) => !isOpen && "none"};
-    margin: 0;
-    list-style: none;
     position: absolute;
     background-color: inherit;
     width: 90%;
@@ -45,7 +43,7 @@ export const SelectList = styled.ul`
     }
 
     li:hover {
-        background-color: ${({ theme }) => theme.colors.veryDarkBlue};
+        background-color: ${({ theme }) => theme.colors.backgroundSecondary};
         cursor: pointer;
     }
 `;
