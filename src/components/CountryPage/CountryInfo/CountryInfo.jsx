@@ -1,11 +1,10 @@
 import { setCountryCode } from "actions/inputs";
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { Button } from "../CountryPage.style";
 import { CountryInfo } from "./CountryInfo.style";
 import { Content } from "./CountryInfo.style";
-import { useParams } from "react-router-dom";
 
 const CountryInfoList = ({ data }) => {
     const {
@@ -22,15 +21,7 @@ const CountryInfoList = ({ data }) => {
         borders
     } = data;
 
-    const { code } = useParams();
-
     const dispatch = useDispatch();
-
-    console.log(code);
-
-    useEffect(() => {
-        dispatch(setCountryCode(code));
-    }, [code, dispatch]);
 
     const handleShowCountry = (code) => {
         dispatch(setCountryCode(code));
