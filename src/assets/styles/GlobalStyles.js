@@ -13,21 +13,23 @@ body{
 h1,h2,h3,h4,h5,h6{
         font-size: inherit;
         margin: 0;
+        padding:0;
 }
 
 *, *::after, *::before {
         box-sizing: inherit;
 }
 
-li,ul{
+li,ul,a{
         margin: 0;
         padding:0;
         list-style: none;
         text-decoration: none;
+        color: inherit;
 }
 
 
-a, button,::placeholder,input {
+ button,::placeholder,input {
         font-family: 'Nunito Sans', sans-serif;
         padding: 0;
         margin: 0;
