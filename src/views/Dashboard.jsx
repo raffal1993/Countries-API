@@ -5,6 +5,7 @@ import React from "react";
 import { Wrapper } from "./Dashboard.style";
 import CountriesList from "components/CountriesList/CountriesList";
 import { Routes, Route } from "react-router-dom";
+import PageNotFound from "components/PageNotFound/PageNotFound";
 
 const Dashboard = () => {
     return (
@@ -20,6 +21,7 @@ const Dashboard = () => {
                     }
                 />
                 <Route path='/country/:code' element={<CountryPage />} />
+                <Route path='*' element={<PageNotFound />}></Route>
             </Routes>
         </Wrapper>
     );
