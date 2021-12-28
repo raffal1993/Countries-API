@@ -1,5 +1,6 @@
 import { useMode } from "hooks/useMode";
 import React from "react";
+import { Link } from "react-router-dom";
 import { Mode, Slider, Wrapper } from "./Header.style";
 
 const Header = () => {
@@ -7,7 +8,9 @@ const Header = () => {
 
     return (
         <Wrapper>
-            <h2>Where in the world?</h2>
+            <Link as='h2' to='/'>
+                Where in the world?
+            </Link>
             <Mode>
                 <Slider
                     isDarkMode={mode === "dark"}

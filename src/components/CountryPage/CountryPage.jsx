@@ -30,7 +30,7 @@ const CountryPage = () => {
                 </Button>
             </Navbar>
             {data?.status === 400 ? (
-                <h2>Country not found :( </h2>
+                <h2>Country not found :/ </h2>
             ) : isFetching ? (
                 <h2>LOADING ...</h2>
             ) : (
