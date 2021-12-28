@@ -8,9 +8,14 @@ export const getTheme = (mode) => {
         xxl: "20px"
     };
 
-    if (mode === "dark")
-        return {
-            colors: {
+    const brakePoints = {
+        small: "375px",
+        medium: "768px"
+    };
+
+    const colors = () => {
+        if (mode === "dark")
+            return {
                 darkGray: `hsl(0, 0%, 52%)`,
 
                 backgroundPrimary: `hsl(209, 23%, 22%)`,
@@ -18,13 +23,10 @@ export const getTheme = (mode) => {
 
                 textPrimary: `hsl(0, 0%, 100%)`,
                 textSecondary: `hsla(0, 0%, 100%, 0.8)`
-            },
-            fontSize
-        };
+            };
 
-    if (mode === "light")
-        return {
-            colors: {
+        if (mode === "light")
+            return {
                 veryDarkBlue: `hsl(207, 26%, 17%)`,
                 veryDarkBlueText: `hsl(200, 15%, 8%)`,
                 darkGray: `hsl(0, 0%, 52%)`,
@@ -34,7 +36,12 @@ export const getTheme = (mode) => {
 
                 textPrimary: `hsl(200, 15%, 8%)`,
                 textSecondary: `hsl(207, 26%, 17%)`
-            },
-            fontSize
-        };
+            };
+    };
+
+    return {
+        colors: colors(),
+        brakePoints,
+        fontSize
+    };
 };
