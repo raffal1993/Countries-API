@@ -1,12 +1,23 @@
 import styled from "styled-components";
 import { Wrapper as Navbar } from "components/Navbar/Navbar.style";
 
+const medium = ({ theme }) => theme.brakePoints.medium;
+
 export const Wrapper = styled.div`
     padding: 0px 60px;
     width: 100%;
 
+    @media (max-width: ${medium}) {
+        padding: 0px 20px;
+    }
+
     ${Navbar} {
-        padding: 80px 0px;
+        min-height: 100px;
+        padding: 60px 0px;
+
+        @media (max-width: ${medium}) {
+            padding: 20px 0px;
+        }
     }
     a {
         text-decoration: none;
@@ -23,7 +34,11 @@ export const Wrapper = styled.div`
     h2 {
         color: ${({ theme }) => theme.colors.textSecondary};
         font-size: 30px;
-        margin: 0 auto;
+        text-align: center;
+
+        @media (max-width: ${medium}) {
+            font-size: ${({ theme }) => theme.fontSize.xl};
+        }
     }
 `;
 

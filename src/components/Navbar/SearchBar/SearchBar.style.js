@@ -9,16 +9,18 @@ export const Wrapper = styled.label`
     border-radius: 5px;
 
     div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 15px;
+        min-width: 70px;
+        position: relative;
 
         svg {
             cursor: pointer;
             fill: ${({ theme }) => theme.colors.textPrimary};
-            height: 70%;
-            width: 70%;
+            height: 40%;
+            width: 40%;
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translateY(-50%);
         }
 
         svg:hover {
@@ -31,7 +33,7 @@ export const Wrapper = styled.label`
         border: none;
         border-radius: 5px;
         color: ${({ theme }) => theme.colors.textPrimary};
-        padding-right: 180px;
+        width: 250px;
         :focus {
             outline: none;
         }
