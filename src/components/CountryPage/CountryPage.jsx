@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Button, Wrapper } from "./CountryPage.style";
 import { Link } from "react-router-dom";
-import { useGetCountryQuery } from "actions/fetchCountries";
+import { useGetCountryByCodeQuery } from "actions/fetchData";
 import { useDispatch } from "react-redux";
 import { Wrapper as Navbar } from "components/Navbar/Navbar.style";
 import { ImArrowLeft2 } from "react-icons/im";
@@ -13,7 +13,7 @@ const CountryPage = () => {
     const dispatch = useDispatch();
     const { code } = useParams();
 
-    const { data, isFetching } = useGetCountryQuery(code);
+    const { data, isFetching } = useGetCountryByCodeQuery(code);
 
     useEffect(() => {
         dispatch(setCountryCode(code));
