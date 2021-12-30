@@ -1,4 +1,4 @@
-import { setCountryCode } from "actions/inputs";
+import { setCountryCode } from "store/actions/reducers/inputsSlice";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";

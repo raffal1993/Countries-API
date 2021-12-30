@@ -2,7 +2,7 @@ import { useSelect } from "downshift";
 import { Wrapper, Button, SelectList } from "./DropdownSelect.style";
 import { IoIosArrowDown } from "react-icons/io";
 import { useDispatch } from "react-redux";
-import { setRegion } from "actions/inputs";
+import { setRegion } from "store/actions/reducers/inputsSlice";
 import { useEffect } from "react";
 import useCountries from "hooks/useCountries";
 

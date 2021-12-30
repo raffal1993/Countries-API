@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import inputsReducer from "actions/inputs";
-import modeReducer from "actions/toggleMode";
-import { countriesApi } from "actions/fetchData";
+import inputsReducer from "store/actions/reducers/inputsSlice";
+import modeReducer from "store/actions/reducers/modeSlice";
+import countriesReducer from "store/actions/reducers/countriesSlice";
+import { countriesApi } from "store/actions/api/countriesApi";
 import { loadState, saveState } from "./sessionStorage";
 import { throttle } from "lodash";
-import countriesReducer from "actions/countries";
 
 export const store = configureStore({
     preloadedState: loadState(),

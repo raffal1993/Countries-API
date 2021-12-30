@@ -1,5 +1,5 @@
 import AppProvider from "./providers/AppProvider";
-import Dashboard from "views/Dashboard";
+import Dashboard from "components/Dashboard/Dashboard";
 import { BrowserRouter } from "react-router-dom";
 
 function App() {

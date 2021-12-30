@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { changeMode } from "actions/toggleMode";
+import { changeMode } from "store/actions/reducers/modeSlice";
 
 export const useMode = () => {
     const dispatch = useDispatch();

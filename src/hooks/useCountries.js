@@ -1,10 +1,10 @@
-import { setCountries } from "actions/countries";
+import { setCountries } from "store/actions/reducers/countriesSlice";
 import {
     useGetAllCountriesQuery,
     useGetCountriesByNameQuery,
     useGetCountriesByRegionQuery
-} from "actions/fetchData";
-import { setName, setRegion } from "actions/inputs";
+} from "store/actions/api/countriesApi";
+import { setName, setRegion } from "store/actions/reducers/inputsSlice";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Wrapper, Content } from "./CountryItem.style";
-import { setCountryCode } from "actions/inputs";
+import { setCountryCode } from "store/actions/reducers/inputsSlice";
 import { useDispatch } from "react-redux";
 
 const CountryItem = ({

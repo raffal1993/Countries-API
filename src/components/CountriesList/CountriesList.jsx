@@ -15,7 +15,7 @@ const CountriesList = () => {
 
     return (
         <Wrapper>
-            {name.length < 2 && !region && !countries.length ? (
+            {name.length < 2 && !region && !countries?.length ? (
                 <h1>
                     Please choose region or type name to find a country (min. 2
                     characters)

@@ -2,7 +2,7 @@ import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { Wrapper } from "./SearchBar.style";
 import { useDispatch } from "react-redux";
-import { setName } from "actions/inputs";
+import { setName } from "store/actions/reducers/inputsSlice";
 import useCountries from "hooks/useCountries";
 
 const SearchBar = () => {
