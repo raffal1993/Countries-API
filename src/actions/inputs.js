@@ -6,8 +6,8 @@ const initialState = {
     countryCode: ""
 };
 
-export const countriesSlice = createSlice({
-    name: "countries",
+export const inputsSlice = createSlice({
+    name: "inputs",
     initialState,
     reducers: {
         setName: (state, action) => {
@@ -22,6 +22,6 @@ export const countriesSlice = createSlice({
     }
 });
 
-export const { setName, setRegion, setCountryCode } = countriesSlice.actions;
+export const { setName, setRegion, setCountryCode } = inputsSlice.actions;
 
-export default countriesSlice.reducer;
+export default inputsSlice.reducer;
