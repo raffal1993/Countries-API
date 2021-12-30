@@ -1,25 +1,21 @@
 import { useSelect } from "downshift";
 import { Wrapper, Button, SelectList } from "./DropdownSelect.style";
 import { IoIosArrowDown } from "react-icons/io";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setRegion } from "actions/inputs";
 import { useEffect } from "react";
+import useCountries from "hooks/useCountries";
 
 const regions = [`Africa`, `Americas`, `Asia`, `Europe`, `Oceania`];
 
 export const DropdownSelect = () => {
-    const name = useSelector((state) => state.countries.name);
-    const region = useSelector((state) => state.countries.region);
+    const { region } = useCountries();
 
     const dispatch = useDispatch();
 
     const handleSelectedItemChange = ({ selectedItem }) => {
         return dispatch(setRegion(selectedItem));
     };
-
-    useEffect(() => {
-        if (name) dispatch(setRegion(""));
-    }, [name, dispatch]);
 
     useEffect(() => {
         dispatch(setRegion(region));

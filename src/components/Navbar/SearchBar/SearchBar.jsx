@@ -1,11 +1,12 @@
 import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { Wrapper } from "./SearchBar.style";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setName } from "actions/inputs";
+import useCountries from "hooks/useCountries";
 
 const SearchBar = () => {
-    const name = useSelector((state) => state.countries.name);
+    const { name } = useCountries();
 
     const dispatch = useDispatch();
 
