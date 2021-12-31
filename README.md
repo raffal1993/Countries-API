@@ -7,7 +7,7 @@
 <br>
 
 
- &nbsp;&nbsp; <strong><em>Countries Api</em></strong> is a simple app that shows You information about searching country like population, lanuage, currency etc... 
+ <strong><em>Countries Api</em></strong> is a simple app that shows You information about searching country like population, lanuage, currency etc... 
  
 <br>
 
