@@ -10,9 +10,10 @@ export const Wrapper = styled(Link)`
     border-radius: 10px;
     cursor: pointer;
     text-decoration: none;
+    transition: transform 0.2s;
 
     &:hover {
-        box-shadow: 0px 0px 5px 1px ${({ theme }) => theme.colors.darkGray};
+        transform: scale(1.05);
     }
 
     .image-container {

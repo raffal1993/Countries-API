@@ -45,6 +45,11 @@ export const Slider = styled.div`
     border-radius: 20px;
     margin-right: 10px;
     cursor: pointer;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+        box-shadow: 0px 0px 2px 2px ${({ theme }) => theme.colors.textSecondary};
+    }
 
     @media (max-width: ${small}) {
         height: 20px;
