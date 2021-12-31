@@ -17,11 +17,15 @@
 <br>
 <h2>:two: Demo:</h2>
 
+<img src="https://drive.google.com/uc?export=view&id=1qTt4Fqe1aMeLau8PYyUSh6Ed7AHVwc4h" style="width: 650px; max-width: 100%; height: auto" />
+<br>
+
 <h2>:three: Setup / Installation:</h2>
 
 <pre><code>git clone https://github.com/raffal1993/Countries-API.git</code></pre>
 
 <pre><code>npm install</code></pre>
+<br>
 
 <h2>:four: Tech Stack:</h2>
 
