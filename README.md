@@ -25,5 +25,22 @@
 
 <h2>:four: Tech Stack:</h2>
 
+Tools and libraries used in project:
+
+ <ul>
+ 
+ <li>Create React App</li>
+ <li>Redux-toolkit</li>
+ <li>Redux-toolkit-query</li>
+ <li>React-router</li>
+ <li>Styled-components</li>
+ <li>Downshift</li>
+ <li>Lodash</li>
+ <li>React-icons</li>
+ 
+ </ul>
+
+
+
 
 
