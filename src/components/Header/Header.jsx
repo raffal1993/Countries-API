@@ -32,7 +32,7 @@ const Header = () => {
                     isDarkMode={mode === "dark"}
                     onClick={toggleMode}
                 ></Slider>
-                <span> Dark Mode</span>
+                <span>{mode === "dark" ? "Dark Mode" : "Light Mode"}</span>
             </Mode>
         </Wrapper>
     );

@@ -19,6 +19,8 @@ const CountryPage = () => {
         dispatch(setCountryCode(code));
     }, [code, dispatch]);
 
+    const showError = data?.status === 400;
+
     return (
         <Wrapper>
             <Navbar>
@@ -29,7 +31,7 @@ const CountryPage = () => {
                     </Link>
                 </Button>
             </Navbar>
-            {data?.status === 400 ? (
+            {showError ? (
                 <h2>Country not found :/ </h2>
             ) : isFetching ? (
                 <h2>LOADING ...</h2>
